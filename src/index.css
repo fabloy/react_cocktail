@@ -1,13 +1,349 @@
-body {
+*{
+  box-sizing: border-box;
+  padding:0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0 auto;
+  font-family: 'Arimo', sans-serif;
+  background-color: black;
+
 }
+
+
+nav{
+  background-color: rgba(214, 0, 43, 0.7);
+  border-bottom: 2px solid rebeccapurple;
+  width: 100%;
+  top:50vh;
+  padding:15px;
+  display: flex;
+  justify-content: center;
+
+}
+nav input{
+  display: block;
+  padding:5px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+}
+nav button{
+  color: white;
+  cursor: pointer;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0);
+}
+nav button:hover{
+  color: rebeccapurple;
+  transition: all 0.5s;
+  transform: rotate(90deg);
+ 
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+ul li{
+
+
+ margin-bottom: 15px;
+ margin-top: 15px;
+ display: flex;
+ cursor: pointer;
+ flex-flow: wrap;
+ text-align: center;
+
+}
+
+
+
+.child{
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  min-height: 60vh;
+  width: 30%;
+  margin: 10px;
+  margin-bottom: 10rem;
+
+  }
+  .childSelected{
+    width: 80%;
+    margin: 0 auto;
+    
+ 
+  }
+  .close{
+    display: none;
+  }
+#parentSections{
+  margin-top: 20px;
+}
+.hamburger{
+  visibility: hidden;
+}
+#containSection{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ background-color: rgba(214, 0, 43, 0.7);
+ margin-top: 15px;
+ margin-bottom: 25px;
+ border-radius: 20px;
+ border-bottom: rebeccapurple 1px solid;
+ 
+ }
+
+ .sections{
+   color: white;
+   font-size: 1.5rem;
+   text-align: center;
+  
+ }
+
+ .sections:hover{
+
+   color: rebeccapurple;
+   transition: color 0.5s;
+ }
+#menu{
+  display: none;
+}
+label[for="menu"]{
+  color: white;
+}
+.containImg{
+  flex: 60%;
+  height: 70%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  /* padding: 10px; */
+   background-repeat:no-repeat;
+   background-size:cover;
+   background-position:center
+ }
+ 
+.containImg img{
+  max-width: 50%;
+  border-radius: 10%;
+  margin-top: 10px;
+}
+.containImg:hover{
+  border: rebeccapurple solid 1px;
+  transform: scale(1.03);
+  transition: all .5s;
+}
+.viewMore{
+  z-index: 2;
+  font-size: .8rem;
+  text-align: left;
+  position: relative;
+  top:90%;
+  min-height: 30%;
+  max-height: 38%;
+  width: 100%;
+  padding:15px;
+  color: rgba(255, 255, 255, 0);
+ 
+}
+
+.containImg:hover .viewMore{
+  background-color: rgba(0, 0, 0, 0.144);
+  color: white;
+  transition: all .8s;
+}
+
+strong{
+  font-size: .8rem;
+  color:#333;
+}
+.containImg:hover strong{
+  color: rebeccapurple;
+  transition: color .6s;
+}
+.containDescription{
+  flex: 60%;
+  height: 30%;
+}
+
+/* .child:hover > div{
+  transform: scale(1.05);
+  transition: all .5s;
+} */
+.child:hover .containDescription{
+  visibility: hidden;
+  bottom: +10px;
+  transition: bottom .8s;
+}
+.topCard{
+  margin: 10px 10px;
+  display:flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.topCard >p{
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+.containDescription p:first-child{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rebeccapurple;
+  font-size: 1rem;
+}
+.containDescription p:last-child{
+  border-top: rebeccapurple 1px solid;
+  padding-top: 5px;
+  font-size: .8rem;
+}
+.description{
+  color: white;
+  position: relative;
+  top: 5%;
+  text-align: left;
+  
+}
+
+.instruction{
+  max-height: 170px;
+  overflow: hidden;
+}
+
+
+.name{
+  /* color: rgba(214, 0, 43, 1); */
+  color: rebeccapurple;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.category{
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  
+}
+
+#banner{
+  min-height: 70vh;
+  background-color: black;
+  margin: 0;
+ 
+  
+}
+#banner h3{
+  color:white;
+  position: relative;
+  top: 50vh;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+#moveOnDown{
+  position: relative;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+}
+#moveOnDown:hover{
+  color: rebeccapurple;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  #banner{
+    min-height: 80vh;
+  }
+  #banner h3{
+    top:65vh;
+  }
+
+    #na .container{
+      width: 70%;
+    }
+    .sections{
+      flex: 100%;
+      margin-bottom: 5px;
+     color: rgba(255, 255, 255, 0);
+     display: block;
+      }
+      
+      #containSection{
+        max-height: 0px;
+        width: 100%;
+        overflow: hidden;
+        transition: all .8s;
+        border-bottom: rebeccapurple solid 0px;
+      
+      }
+      .containImg:hover{
+        border: rebeccapurple solid 1px;
+        transform: scale(1.1);
+        transition: all .5s;
+      }
+      #menu{
+     display: none
+      }
+      
+     .hamburger{
+       visibility: visible;
+       transition: all .5s;
+     }
+     #menu:checked ~ label .hamburger{
+       color: rebeccapurple;
+       transform: rotate(90deg);
+       transition: all .5s;
+     }
+     #menu:checked~ #containSection{
+       overflow: visible;
+       transition: all 0.8s;
+       max-height: 300px;
+       border-bottom: rebeccapurple solid 1px;
+     }
+     #menu:checked~ #containSection .sections{
+      color: white;
+      transition: all 1s;
+      display: block;
+       
+     }
+     .viewMore{
+      color: rgba(255, 255, 255, 1);
+      background-color: black;
+     }
+     .containImg strong{
+      color: rebeccapurple;
+      transition: color .6s;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px){
+  #banner{
+    min-height: 91vh;
+  }
+  #banner h3{
+    font-size: 2rem;
+    top:78vh
+  }
+  .child{
+    flex: 50%;
+  }
+} 
